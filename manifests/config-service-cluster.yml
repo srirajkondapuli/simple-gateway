@@ -40,6 +40,7 @@ kind: Service
 metadata:
   name: config-service
 spec:
+  type: NodePort
   ports:
     - protocol: TCP
       port: 8888
@@ -89,7 +90,7 @@ kind: Service
 metadata:
   name: gateway-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: gateway-service
   ports:
