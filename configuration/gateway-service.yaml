@@ -6,13 +6,13 @@ spring:
   main:
     allow-bean-definition-overriding: true
   cloud:
-    bus:
-      enabled: false
-    stream:
-      kafka:
-        binder:
-          zkNodes: localhost:2181
-          brokers: localhost:9092
+    # bus:
+    #   enabled: false
+    # stream:
+    #   kafka:
+    #     binder:
+    #       zkNodes: localhost:2181
+    #       brokers: localhost:9092
     gateway:
       httpclient:
         wiretap: true
@@ -29,19 +29,6 @@ spring:
             - RewritePath=/get, /get
 connectionTimeoutMillis: 12000
 readTimeoutMillis: 10000
-gateway-service:
-  server:
-    port: 9090
-
-  clients:
-    - name: clienta
-      enabled: true
-
-    - name: clientb
-      enabled: true
-
-    - name: clientc
-      enabled: false
 
 management:
   endpoints:

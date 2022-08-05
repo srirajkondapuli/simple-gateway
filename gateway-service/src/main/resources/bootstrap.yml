@@ -2,13 +2,13 @@ spring:
   application:
     name: gateway-service
   cloud:
-    bus:
-      enabled: false
-    stream:
-      kafka:
-        binder:
-          zkNodes: localhost:2181
-          brokers: localhost:9092
+    # bus:
+    #   enabled: false
+    # stream:
+    #   kafka:
+    #     binder:
+    #       zkNodes: localhost:2181
+    #       brokers: localhost:9092
     config:
       profile: clienta
       # target URI for config server corresponds to Kubernetes Service config-service

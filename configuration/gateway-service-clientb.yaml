@@ -24,19 +24,6 @@ spring:
             - RewritePath=/get, /get
 connectionTimeoutMillis: 12000
 readTimeoutMillis: 10000
-gateway-service:
-  server:
-    port: 9090
-
-  clients:
-    - name: clienta
-      enabled: true
-
-    - name: clientb
-      enabled: true
-
-    - name: clientc
-      enabled: false
 
 management:
   endpoints:

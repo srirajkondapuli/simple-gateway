@@ -6,8 +6,8 @@ spring:
   main:
     allow-bean-definition-overriding: true
   cloud:
-    bus:
-      enabled: false
+    # bus:
+    #   enabled: false
     gateway:
       httpclient:
         wiretap: true
@@ -24,18 +24,6 @@ spring:
             - RewritePath=/get, /get
 connectionTimeoutMillis: 12000
 readTimeoutMillis: 30000
-gateway-service:
-  server:
-    port: 9090
-  clients:
-    - name: clienta
-      enabled: true
-
-    - name: clientb
-      enabled: true
-
-    - name: clientc
-      enabled: false
 
 management:
   endpoints:
