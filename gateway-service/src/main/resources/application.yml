@@ -4,6 +4,13 @@ spring:
   config:
     import: 'optional:configserver:http://config-service:8888/sample-gateway/'
   cloud:
+    bus:
+      enabled: false
+    stream:
+      kafka:
+        binder:
+          zkNodes: zookeeper-service:2181
+          brokers: kafka-service:9092
     config:
       uri: http://config-service:8888
 management:
