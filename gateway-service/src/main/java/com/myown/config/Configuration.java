@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter
 @Component
 @EnableRetry
-@ConfigurationProperties(prefix = "gateway-service")
+@ConfigurationProperties
 public class Configuration {
 
 	private Integer connectionTimeoutMillis;

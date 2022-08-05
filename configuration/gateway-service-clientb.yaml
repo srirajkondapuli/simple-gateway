@@ -1,0 +1,70 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway-service
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    gateway:
+      httpclient:
+        wiretap: true
+      httpserver:
+        wiretap: true
+      routes:
+        - id: routeA
+          uri: http://httpbin.org
+          predicates:
+            - Method=GET
+            - Path=/get,
+          filters:
+            - name: RouteAFilter
+            - RewritePath=/get, /get
+
+gateway-service:
+  server:
+    port: 8080
+  management:
+    endpoints:
+      web:
+        exposure: '*'
+      health:
+        show-details: always
+  connectionTimeoutMillis: 12000
+  readTimeoutMillis: 10000
+  clients:
+    - name: clienta
+      enabled: true
+
+    - name: clientb
+      enabled: true
+
+    - name: clientc
+      enabled: false
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: configprops,beans,mappings,env,health,refresh,httptrace
+  endpoint:
+    info:
+      enabled: true
+    mappings:
+      enabled: true
+    beans:
+      enabled: true
+
+    health:
+      show-details: always
+      probes:
+        enabled: true
+logging:
+  level:
+    reactor:
+      netty: INFO
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE
