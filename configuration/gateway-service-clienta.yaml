@@ -20,8 +20,8 @@ spring:
           filters:
             - name: RouteAFilter
             - RewritePath=/get, /get
-  connectionTimeoutMillis: 12000
-  readTimeoutMillis: 10000
+connectionTimeoutMillis: 12000
+readTimeoutMillis: 10000
 gateway-service:
   server:
     port: 8080
