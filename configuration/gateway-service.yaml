@@ -6,6 +6,13 @@ spring:
   main:
     allow-bean-definition-overriding: true
   cloud:
+    bus:
+      enabled: false
+    stream:
+      kafka:
+        binder:
+          zkNodes: localhost:2181
+          brokers: localhost:9092
     gateway:
       httpclient:
         wiretap: true
@@ -25,12 +32,6 @@ readTimeoutMillis: 10000
 gateway-service:
   server:
     port: 8080
-  management:
-    endpoints:
-      web:
-        exposure: '*'
-      health:
-        show-details: always
 
   clients:
     - name: clienta

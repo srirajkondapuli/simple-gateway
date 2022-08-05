@@ -6,6 +6,8 @@ spring:
   main:
     allow-bean-definition-overriding: true
   cloud:
+    bus:
+      enabled: false
     gateway:
       httpclient:
         wiretap: true
@@ -23,15 +25,6 @@ spring:
 connectionTimeoutMillis: 12000
 readTimeoutMillis: 30000
 gateway-service:
-  server:
-    port: 9000
-  management:
-    endpoints:
-      web:
-        exposure: '*'
-      health:
-        show-details: always
-
   clients:
     - name: clienta
       enabled: true

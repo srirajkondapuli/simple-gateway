@@ -3,7 +3,6 @@ spring:
     name: config-service
   cloud:
     bus:
-      id: my-config-server
       enabled: false
     stream:
       kafka:
