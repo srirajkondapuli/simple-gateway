@@ -4,7 +4,9 @@ spring:
   cloud:
     bus:
       id: my-config-server
-      enabled: false
+      enabled: true
+      refresh:
+        enabled: true
     stream:
       kafka:
         binder:
@@ -14,7 +16,7 @@ spring:
       server:
         git:
           # URI of GIT repo containing properties
-          uri: https://github.com/srirajkondapuli/simple-gateway/
+          uri: https://github.com/srirajkondapuli/simple-gateway
           default-label: main
           search-paths: configuration
 server:

@@ -3,7 +3,9 @@ spring:
     name: gateway-service
   cloud:
     bus:
-      enabled: false
+      enabled: true
+      refresh:
+        enabled: true
     stream:
       kafka:
         binder:
@@ -11,10 +13,12 @@ spring:
           brokers: kafka-service:9092
     config:
       profile: clienta
+
       # target URI for config server corresponds to Kubernetes Service config-service
       uri: http://config-service:8888
       #uri: http://localhost:8888
       # the label must correspond with the branch name in Github
+
       label: main
 
       fail-fast: true
