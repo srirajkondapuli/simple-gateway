@@ -1,0 +1,4 @@
+rootProject.name = 'simple-gateway'
+
+include 'config-service'
+include 'gateway-service'

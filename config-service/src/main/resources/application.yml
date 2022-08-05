@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          # URI of GIT repo containing properties
+          uri: https://github.com/srirajkondapuli/simple-gateway
+          default-label: main
+          search-paths: configuration
+server:
+  port: 8888
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
