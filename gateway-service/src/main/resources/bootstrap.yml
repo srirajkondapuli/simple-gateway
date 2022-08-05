@@ -3,6 +3,7 @@ spring:
     name: gateway-service
   cloud:
     bus:
+      id: my-config-server
       enabled: true
       refresh:
         enabled: true

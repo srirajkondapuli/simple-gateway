@@ -22,8 +22,8 @@ spring:
           filters:
             - name: RouteAFilter
             - RewritePath=/get, /get
-connectionTimeoutMillis: 24000
-readTimeoutMillis: 600000
+connectionTimeoutMillis: 60000
+readTimeoutMillis: 60000
 
 management:
   endpoints:
