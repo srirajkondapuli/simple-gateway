@@ -24,7 +24,7 @@ connectionTimeoutMillis: 12000
 readTimeoutMillis: 30000
 gateway-service:
   server:
-    port: 8080
+    port: 9000
   management:
     endpoints:
       web:
@@ -54,6 +54,8 @@ management:
     mappings:
       enabled: true
     beans:
+      enabled: true
+    refresh:
       enabled: true
 
     health:

@@ -55,6 +55,8 @@ management:
       enabled: true
     beans:
       enabled: true
+    refresh:
+      enabled: true
 
     health:
       show-details: always
