@@ -26,13 +26,7 @@ connectionTimeoutMillis: 12000
 readTimeoutMillis: 10000
 gateway-service:
   server:
-    port: 8080
-  management:
-    endpoints:
-      web:
-        exposure: '*'
-      health:
-        show-details: always
+    port: 9090
 
   clients:
     - name: clienta

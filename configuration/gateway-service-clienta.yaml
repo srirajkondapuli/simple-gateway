@@ -25,6 +25,8 @@ spring:
 connectionTimeoutMillis: 12000
 readTimeoutMillis: 30000
 gateway-service:
+  server:
+    port: 9090
   clients:
     - name: clienta
       enabled: true

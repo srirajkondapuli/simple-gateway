@@ -31,7 +31,7 @@ connectionTimeoutMillis: 12000
 readTimeoutMillis: 10000
 gateway-service:
   server:
-    port: 8080
+    port: 9090
 
   clients:
     - name: clienta
